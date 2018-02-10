@@ -1,0 +1,44 @@
+{
+  "name": "fenced-toml",
+  "displayName": "Markdown fenced code block injection",
+  "description": "Based off off Mat Bierner's example https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example",
+  "version": "0.0.1",
+  "publisher": "Marco Beltempo",
+  "license": "MIT License",
+  "engines": {
+    "vscode": "^1.8.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "toml",
+        "aliases": [
+          "TOML",
+          "toml"
+        ],
+        "extensions": [
+          ".toml",
+          ".tml"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "toml",
+        "scopeName": "source.toml",
+        "path": "./syntaxes/toml.tmLanguage.json"
+      },
+      {
+        "scopeName": "markdown.toml.codeblock",
+        "path": "./syntaxes/codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
+      }
+    ]
+  }
+}
