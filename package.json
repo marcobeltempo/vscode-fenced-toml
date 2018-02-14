@@ -30,7 +30,7 @@
       {
         "language": "toml",
         "scopeName": "source.toml",
-        "path": "./syntaxes/toml.tmLanguage.json"
+        "path": "./syntaxes/TOML.tmLanguage"
       },
       {
         "scopeName": "markdown.toml.codeblock",
